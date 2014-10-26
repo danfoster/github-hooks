@@ -22,3 +22,10 @@ Repoistories are configured in the following way:
     }
   }
 }
+```
+
+The listen port can be customised:
+
+```
+"port": 4123
+```

@@ -3,6 +3,7 @@
 import githubhooks
 import githubevents
 from flask import Flask, request
+import config
 
 app = Flask(__name__)
 
@@ -20,7 +21,7 @@ def consume_post():
     return ""
 
 def server():
-    app.run(host='0.0.0.0',debug=False)
+    app.run(host='0.0.0.0',port=int(config.config['port']),debug=False)
 
 if __name__ == '__main__':
     server()

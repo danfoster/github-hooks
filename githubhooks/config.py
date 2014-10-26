@@ -5,8 +5,13 @@ import json
 
 def parseconfig():
     stream = open(_findconfigfile(), 'r')
-    return json.load(stream)
+    config =  json.load(stream)
 
+    # Default listen address
+    if 'port' not in config:
+        config['port'] = "5000"
+
+    return config
 
 def _findconfigfile():
     """

@@ -6,5 +6,6 @@
                 "repodir": "~/Documents/hooktestcopy"
             }
         }
-    }
+    },
+    "port": 4123
 }
