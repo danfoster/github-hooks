@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 
 import githubhooks
-import config
 import githubevents
 from flask import Flask, request
 
 app = Flask(__name__)
-config = config.parseconfig() 
 
 @app.route('/',methods=['POST'])
 def consume_post():
@@ -22,7 +20,7 @@ def consume_post():
     return ""
 
 def server():
-    app.run(host='0.0.0.0',debug=True)
+    app.run(host='0.0.0.0',debug=False)
 
 if __name__ == '__main__':
     server()

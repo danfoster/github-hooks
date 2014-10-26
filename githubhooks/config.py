@@ -1,10 +1,11 @@
 import os.path
 import sys
-import yaml
+import json
+
 
 def parseconfig():
     stream = open(_findconfigfile(), 'r')
-    return yaml.load(stream)
+    return json.load(stream)
 
 
 def _findconfigfile():
@@ -25,3 +26,5 @@ def _findconfigfile():
     for configfile in configfiles:
         print " - %s" % configfile
     sys.exit(1)
+
+config = parseconfig()
