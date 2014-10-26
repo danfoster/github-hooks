@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 
 import githubhooks
+import config
 import githubevents
 from flask import Flask, request
 
 app = Flask(__name__)
+config = config.parseconfig() 
 
 @app.route('/',methods=['POST'])
 def consume_post():
