@@ -41,7 +41,7 @@ def consume_post():
     return ""
 
 def server():
-    app.run(host='0.0.0.0',port=int(config.config['port']),debug=True)
+    app.run(host='0.0.0.0',port=int(config.config['port']),debug=False)
 
 if __name__ == '__main__':
     server()
