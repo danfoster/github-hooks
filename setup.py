@@ -2,7 +2,7 @@
 
 from setuptools import setup, find_packages
 
-RPM_REQUIRED_DEPS = "python-flask"
+RPM_REQUIRED_DEPS = "python-flask python-setuptools"
  
 ## HACK FOR DEPS IN RPMS
 from setuptools.command.bdist_rpm import bdist_rpm
@@ -28,7 +28,7 @@ bdist_rpm._make_spec_file = custom_make_spec_file
 
 setup(
     name = "githubhooks",
-    version = "0.1",
+    version = "0.1.1",
     packages = find_packages(),
     entry_points = {
         'console_scripts': ['githubhooks=githubhooks.server:server'],
