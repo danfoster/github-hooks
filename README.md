@@ -29,3 +29,9 @@ The listen port can be customised:
 ```
 "port": 4123
 ```
+
+You can validate the github signature by setting a secret in the github webhook and locally:
+
+```
+"secret": "hunter2"
+```

@@ -7,5 +7,6 @@
             }
         }
     },
-    "port": 4123
+    "port": 4123,
+    "secret": "hunter2"
 }
