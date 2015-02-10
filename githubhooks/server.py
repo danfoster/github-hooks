@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 def _validate_sig(secret,sig):
     if not sig:
-        print "ERROR: Secret configured but didn't recieve a signature fomr github. Aborting for safety"
+        print "ERROR: Secret configured but didn't recieve a signature from github. Aborting for safety"
         return False
     hash_name,hash = sig.split('=')
     if hash_name != 'sha1':
