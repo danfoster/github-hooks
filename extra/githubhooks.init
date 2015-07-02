@@ -31,7 +31,11 @@ start() {
     [ -x $exec ] || exit 5
     echo -n $"Starting $prog: "
     # if not running, start it up here, usually something like "daemon $exec"
-    daemon $exec >/dev/null 2>&1 &
+    if [ -n "$USER" ]; then
+	    daemon --user=$USER $exec >/dev/null 2>&1 &
+    else
+	    daemon $exec >/dev/null 2>&1 &
+    fi 
     retval=$?
     echo
     [ $retval -eq 0 ] && touch $lockfile

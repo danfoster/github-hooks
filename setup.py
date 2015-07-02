@@ -28,7 +28,7 @@ bdist_rpm._make_spec_file = custom_make_spec_file
 
 setup(
     name = "githubhooks",
-    version = "0.1.1",
+    version = "0.1.2",
     packages = find_packages(),
     entry_points = {
         'console_scripts': ['githubhooks=githubhooks.server:server'],
