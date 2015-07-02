@@ -11,4 +11,10 @@ def gitpull(config):
     with open(os.devnull, "w") as fnull:
         subprocess.Popen(['git','pull'],cwd=repodir,stdout=fnull,stderr=fnull)
 
+def run(config):
+   cmd = os.path.expanduser(config['command'])
+
+   subprocess.call(cmd,shell=True)
+
+
 
